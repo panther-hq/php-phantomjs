@@ -1,0 +1,25 @@
+version: "3.9"
+
+x-restart-policy: &restart_policy
+  restart: unless-stopped
+
+services:
+  php:
+    container_name: phantom_php
+    hostname: phantom_php
+    << : *restart_policy
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        USER_UID: 1000
+        USER_GID: 1000
+        USER_NAME: phantom
+        USER_GROUP: phantom
+    volumes:
+      - ./:/home/phantom/
+    networks:
+      - phantom
+    user: phantom
+networks:
+  phantom:

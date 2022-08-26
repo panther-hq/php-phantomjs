@@ -2,5 +2,9 @@
 composer.phar
 composer.lock
 vendor/
-bin/phpunit
-bin/phantomjs
+/bin/
+/.composer/
+/.phpunit.result.cache
+/.bash_history
+/.cache/
+/.idea/

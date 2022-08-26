@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit 
-    bootstrap                   = "./src/JonnyW/PhantomJs/Tests/bootstrap.php" 
+<phpunit
     backupGlobals               = "false"
     backupStaticAttributes      = "false"
     colors                      = "true"
@@ -9,19 +8,10 @@
     convertNoticesToExceptions  = "true"
     convertWarningsToExceptions = "true"
     processIsolation            = "false"
-    stopOnFailure               = "true"
-    syntaxCheck                 = "false">
+    stopOnFailure               = "true">
     <testsuites>
         <testsuite name="PhantomJS Test Suite">
-            <directory suffix="Test.php">./src/JonnyW/PhantomJs/Tests/*</directory>
+            <directory suffix="Test.php">./Tests/*</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <directory suffix=".php">./src/</directory>
-            <exclude>
-                <directory>./src/JonnyW/PhantomJs/Tests</directory>
-            </exclude>
-        </whitelist>
-    </filter>
 </phpunit>
